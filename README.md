@@ -1,0 +1,1 @@
+# Algoritimo para solução Simplex
