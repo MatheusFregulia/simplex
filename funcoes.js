@@ -110,10 +110,10 @@ function criarForm(variaveis, restricoes) {
 	}
 	
 
-	// Adicionando a última linha '-Z'
+	// Adicionando a última linha 'Z'
 	var z = document.querySelectorAll(".inputZ");
 	coluna = 0;
-	matriz.push(['-Z']);
+	matriz.push(['Z']);
 	for (var l = 0; l < variaveis; l++) {
 		matriz[linhas][l+1] = parseFloat(z[l].value.replace(",","."));
 	}
@@ -222,7 +222,7 @@ function printTabela(p_matriz) {
 				b.insertBefore(texto, b.firstChild);
 				td.appendChild(b);
 			} else {
-				if (variavel != '-Z') {
+				if (variavel != 'Z') {
 					var fracao = new Fraction(variavel);
 					variavel = fracao.toFraction();
 					var texto = document.createTextNode(variavel);
@@ -314,4 +314,8 @@ function calcMatriz(p_matriz) {
 			printTabela(p_matriz);
 		}
 	}
+}
+
+function novo() {
+	window.location.href='index.html';
 }
